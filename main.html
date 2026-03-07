@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GitHub Issues Tracker | Home</title>
     <!-- favicon -->
     <link
@@ -38,13 +38,39 @@
 
     <!-- custom css -->
     <link rel="stylesheet" href="./css/index.css" />
-</head>
-<body>
+  </head>
+  <body class="bg-[#64748b0c]">
     <!-- navbar section starts -->
     <header>
-
+      <div class="navbar shadow-sm px-14 py-2">
+        <div class="flex flex-1 items-center">
+          <img class="w-8" src="./assets/github-logo.png" alt="Github Logo" />
+          <a class="btn btn-ghost text-[#1F2937] font-semibold text-xl"
+            >GitHub Issues Tracker</a
+          >
+        </div>
+        <div class="flex gap-2">
+          <div class="relative">
+            <i
+              class="fa-solid fa-magnifying-glass absolute z-10 top-3 left-2 text-[#64748B]"
+            ></i
+            ><input
+              type="text"
+              placeholder="Search issues..."
+              class="input input-bordered w-24 md:w-auto pl-8 text-base"
+            />
+          </div>
+          <div class="">
+            <button class="btn btn-primary"><i class="fa-solid fa-plus"></i> New Issue</button>
+          </div>
+        </div>
+      </div>
     </header>
 
+    <main>
+        <!-- tab section starts -->
+    </main>
+
     <script src="./js/main.js"></script>
-</body>
+  </body>
 </html>
