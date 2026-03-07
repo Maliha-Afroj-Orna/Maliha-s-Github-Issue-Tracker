@@ -69,56 +69,66 @@
       </div>
     </header>
 
-    <main class=" max-w-7xl mx-auto">
+    <main class="max-w-7xl mx-auto">
       <!-- tab section starts -->
-      <div id="tabs" class=" mt-14 bg-white w-full p-6 rounded-lg mb-4 shadow-md">
-        <button onclick="toggleButton('all-tab')" id="all-tab" class="all-tab btn btn-primary">All</button>
-        <button onclick="toggleButton('open-tab')" id="open-tab" class="btn btn-outline">Open</button>
-        <button onclick="toggleButton('close-tab')" id="close-tab" class="btn btn-outline">Closed</button>
+      <div
+        id="tabs"
+        class="mt-14 bg-white w-full p-6 rounded-lg mb-4 shadow-md"
+      >
+        <button
+          onclick="toggleButton('all-tab')"
+          id="all-tab"
+          class="all-tab btn btn-primary"
+        >
+          All
+        </button>
+        <button
+          onclick="toggleButton('open-tab')"
+          id="open-tab"
+          class="btn btn-outline"
+        >
+          Open
+        </button>
+        <button
+          onclick="toggleButton('close-tab')"
+          id="close-tab"
+          class="btn btn-outline"
+        >
+          Closed
+        </button>
       </div>
 
       <div class="bg-white rounded-lg shadow-md">
-          <!-- issues number section starts -->
+        <!-- issues number section starts -->
         <div class="flex justify-between items-center p-8">
-            <div class="issues-left flex justify-between items-center">
-                <img class="bg-[#ECE4FF] p-2 rounded-full" src="./assets/Aperture.png" alt="Aperture">
-                <div class="ml-2">
-                    <h2 class=" text-[#1F2937] text-xl font-semibold">50 Issues</h2>
-                    <p class="text-base text-[#64748B]">Track and manage your project issues</p>
-                </div>
+          <div class="issues-left flex justify-between items-center">
+            <img
+              class="bg-[#ECE4FF] p-2 rounded-full"
+              src="./assets/Aperture.png"
+              alt="Aperture"
+            />
+            <div class="ml-2">
+              <h2 class="text-[#1F2937] text-xl font-semibold"><span id="totalNumOfCards"></span> Issues</h2>
+              <p class="text-base text-[#64748B]">
+                Track and manage your project issues
+              </p>
             </div>
-            <div class="issues-right flex justify-between items-center">
-                <div class="bg-[#00A96E] w-2 h-2 rounded-full mr-2"></div><p class="text-base text-[#1F2937] font-medium">Open</p>
-                <div class="bg-[#A855F7] w-2 h-2 rounded-full mx-2"></div><p class="text-base text-[#1F2937] font-medium">Closed</p>
-            </div>
+          </div>
+          <div class="issues-right flex justify-between items-center">
+            <div class="bg-[#00A96E] w-2 h-2 rounded-full mr-2"></div>
+            <p class="text-base text-[#1F2937] font-medium">Open</p>
+            <div class="bg-[#A855F7] w-2 h-2 rounded-full mx-2"></div>
+            <p class="text-base text-[#1F2937] font-medium">Closed</p>
+          </div>
         </div>
 
-        <hr class="text-gray-200 w-full my-6">
+        <hr class="text-gray-200 w-full my-6" />
 
         <!-- issues card section starts -->
-         <div class="grid grid-cols-4 gap-2 p-4">
-            <div class="card bg-white card-md shadow-xl">
-            <div class="card-body space-y-2">
-                <div class="flex justify-between items-center">
-                    <img src="./assets/Open-Status.png" alt="Open Status">
-                    <div class="badge badge-error text-xs text-[#EF4444] bg-[#FEECEC] font-medium">High</div>
-                </div>
-                <h2 class="card-title text-[#1F2937] text-base font-semibold">Fix navigation menu on mobile devices</h2>
-                <p class=" line-clamp-2">The navigation menu doesn't collapse properly on mobile devices...</p>
-                <div class="flex gap-2">
-                   <div class="badge badge-error text-xs text-[#EF4444] bg-[#FEECEC] font-medium"><i class="fa-solid fa-bug text-[#EF4444]"></i> BUG</div>
-                   <div class="badge badge-error text-xs text-[#D97706] bg-[#FFF8DB] font-medium"><img class="h-4 w-4" src="./assets/circle-badge.png" alt="circle badge"> HELP WANTED</div>
+        <div id="allCards" class="grid grid-cols-4 gap-2 p-4">
+          <!-- all cards will be dynamically show here -->
 
-                </div>
-
-                <hr class="text-gray-200 w-full">
-
-                <p class="text-[#64748B] text-sm">#1 by john_doe</p>
-                <p class="text-[#64748B] text-sm">1/15/2024</p>
-            </div>
-            </div>
-         </div>
-
+        </div>
       </div>
     </main>
 
