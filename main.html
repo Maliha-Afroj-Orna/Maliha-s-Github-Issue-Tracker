@@ -39,7 +39,7 @@
     <!-- custom css -->
     <link rel="stylesheet" href="./css/index.css" />
   </head>
-  <body class="bg-[#64748b0c]">
+  <body class="bg-[#64748b2e] h-dvh">
     <!-- navbar section starts -->
     <header>
       <div class="navbar shadow-sm px-14 py-2">
@@ -61,14 +61,28 @@
             />
           </div>
           <div class="">
-            <button class="btn btn-primary"><i class="fa-solid fa-plus"></i> New Issue</button>
+            <button class="btn btn-primary">
+              <i class="fa-solid fa-plus"></i> New Issue
+            </button>
           </div>
         </div>
       </div>
     </header>
 
-    <main>
-        <!-- tab section starts -->
+    <main class=" max-w-5xl mx-auto">
+      <!-- tab section starts -->
+      <div class=" mt-14 bg-white w-full py-6 px-6 rounded-lg">
+        <button onclick="toggleButton('all-tab')" id="all-tab" class="btn btn-primary">All</button>
+        <button onclick="toggleButton('open-tab')" id="open-tab" class="btn btn-outline">Open</button>
+        <button onclick="toggleButton('close-tab')" id="close-tab" class="btn btn-outline">Closed</button>
+      </div>
+
+      <div>
+          <!-- issues number section starts -->
+        <div>
+            <img src="./assets/Aperture.png" alt="Aperture">
+        </div>
+      </div>
     </main>
 
     <script src="./js/main.js"></script>
