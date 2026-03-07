@@ -17,4 +17,11 @@ const toggleButton = (id) => {
   const clickedBtn = document.getElementById(id);
   clickedBtn.classList.remove(...inActiveBtn);
   clickedBtn.classList.add(...activeBtn);
+
+  // card section starts
+  
 };
+
+
+
+
