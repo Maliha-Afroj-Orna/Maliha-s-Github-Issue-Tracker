@@ -127,10 +127,69 @@
         <hr class="text-gray-200 w-full my-6" />
 
         <!-- issues card section starts -->
-        <!-- all cards -->
         <div id="cardContainer" class="grid grid-cols-4 gap-2 p-4">
           <!-- all cards will be dynamically show here -->
         </div>
+
+        <!-- modal section starts -->
+        <!-- Open the modal using ID.showModal() method -->
+        <!-- <button class="btn" onclick="issue_modal.showModal()">open modal</button> -->
+        <dialog id="issue_modal" class="modal p-4">
+          <div class="modal-box space-y-4">
+            <h3 id="modalTitle" class="text-2xl font-bold text-[#1F2937]">
+              Fix broken image uploads
+            </h3>
+            <div class="flex justify-start items-center gap-3">
+              <button id="modalStatus"
+                class="btn btn-success rounded-3xl text-white font-medium text-sm"
+              >
+                Opened
+              </button>
+              <p>
+                <li class="mr-3 text-[#64748B] text-sm">
+                  Opened by <span id="modalName">Fahim Ahmed</span>
+                </li>
+                <li id="modalDate" class="text-[#64748B] text-sm">22/02/2026</li>
+              </p>
+            </div>
+            <div>
+              <div id="modalBadge1"
+                class="badge badge-error text-xs text-[#EF4444] bg-[#FEECEC] border-[#FEECEC] font-medium"
+              >
+                BUG
+              </div>
+              <div id="modalBadge2"
+                class="badge badge-error text-xs text-[#EF4444] bg-[#FEECEC] border-[#FEECEC] font-medium"
+              >
+                HELP WANTED
+              </div>
+            </div>
+            <p id="modalDesc" class="py-4 text-[#64748B] text-base">
+              The navigation menu doesn't collapse properly on mobile devices.
+              Need to fix the responsive behavior.
+            </p>
+            <div class="flex items-center gap-25">
+              <div>
+                <p class="text-[#64748B] text-base">Assignee:</p>
+                <p id="modalFooterName" class="text-[#1F2937] text-base font-semibold">Fahim Ahmed</p>
+              </div>
+              <div class="text-center">
+                <p class="text-[#64748B] text-base">Priority:</p>
+                <div id="modalFooterBadge"
+                  class="btn btn-error text-xs text-white bg-[#EF4444] border-[#FEECEC] font-medium rounded-3xl px-6"
+                >
+                  HIGH
+                </div>
+              </div>
+            </div>
+            <div class="modal-action">
+              <form method="dialog">
+                <!-- if there is a button in form, it will close the modal -->
+                <button class="btn btn-primary">Close</button>
+              </form>
+            </div>
+          </div>
+        </dialog>
       </div>
     </main>
 
