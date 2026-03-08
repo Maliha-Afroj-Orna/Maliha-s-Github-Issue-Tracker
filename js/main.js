@@ -30,26 +30,41 @@ const toggleButton = (id) => {
     loadCloseCards();
   }
 };
+// loading spinner section starts
+const loadingSpinner = document.getElementById("loadingSpinner");
+const showLoading = () => {
+  loadingSpinner.classList.remove("hidden");
+  cardContainer.innerHTML = "";
+};
+const hideLoading = () => {
+  loadingSpinner.classList.add("hidden");
+};
 
 // load all cards
 const loadAllCards = async () => {
+  showLoading();
   const res = await fetch(
     "https://phi-lab-server.vercel.app/api/v1/lab/issues",
   );
   const data = await res.json();
   issues = data.data;
+  hideLoading();
   displayAllData(issues);
   totalNumOfCards.innerText = issues.length;
 };
 // load open cards
 const loadOpenCards = () => {
+  showLoading();
   const openIssues = issues.filter((issue) => issue.status == "open");
+  hideLoading();
   displayAllData(openIssues);
   totalNumOfCards.innerText = openIssues.length;
 };
 // load close cards
 const loadCloseCards = () => {
+  showLoading();
   const closeIssues = issues.filter((issue) => issue.status == "closed");
+  hideLoading();
   displayAllData(closeIssues);
   totalNumOfCards.innerText = closeIssues.length;
 };
