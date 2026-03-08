@@ -78,7 +78,7 @@ const displayAllData = (issues) => {
         <div onclick="openModal(${issue.id})" class="card bg-white card-md shadow-xl border border-gray-100 h-[94%] cursor-pointer">
             <div class="card-body space-y-2 ${issue.status == "open" ? "border-t-4 border-[#00A96E] rounded-xl" : "border-t-4 border-[#A855F7] rounded-xl"}">
               <div class="flex justify-between items-center">
-                <img src="./assets/Open-Status.png" alt="Open Status" />
+               ${issue.status == "open" ? '<img src="./assets/Open-Status.png" alt="Open Status" />' : '<img src="./assets/Closed-Status.png" alt="Closed Status" />'} 
                 <div
                   class="badge badge-error text-xs ${issue.priority.toUpperCase() == "HIGH" ? "text-[#EF4444] bg-[#FEECEC] border-[#FEECEC]" : issue.priority.toUpperCase() == "MEDIUM" ? "text-[#F59E0B] bg-[#FFF6D1] border-[#FFF6D1]" : "text-[#9CA3AF] bg-[#EEEFF2] border-[#EEEFF2]"}  font-medium"
                 >
