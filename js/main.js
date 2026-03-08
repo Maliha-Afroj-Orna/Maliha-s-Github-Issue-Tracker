@@ -166,3 +166,27 @@ const openModal = async (id) => {
 };
 
 // search section starts
+const searchBtn = document.getElementById("searchBtn");
+const searchInput = document.getElementById("searchInput");
+
+searchBtn.addEventListener("click", () => {
+  const searchInputValue = searchInput.value.trim();
+  searchText(searchInputValue);
+});
+searchInput.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    const searchInputValue = searchInput.value.trim();
+    searchText(searchInputValue);
+  }
+});
+const searchText = async (searchText) => {
+  showLoading();
+  const res = await fetch(
+    `https://phi-lab-server.vercel.app/api/v1/lab/issues/search?q=${searchText}`,
+  );
+  const data = await res.json();
+  const searchedText = data.data;
+  hideLoading();
+  displayAllData(searchedText);
+  totalNumOfCards.innerText = searchedText.length;
+};
