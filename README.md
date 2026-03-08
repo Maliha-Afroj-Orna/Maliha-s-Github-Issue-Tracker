@@ -28,7 +28,7 @@ For Example: const loadData = () => {}
 
 5. What are template literals?
    
-➡️ Template literals are used to create strings using ``. We can also use dynamic values inside ``. For dynamic values we use `${}`.
+➡️ Template literals are used to create strings using ``` `` ```. We can also use dynamic values inside ``` `` ```. For dynamic values we use `${}`.
 
 
 
