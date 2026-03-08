@@ -42,11 +42,11 @@
   <body class="bg-[#64748b0c] h-vh pb-8">
     <!-- navbar section starts -->
     <header>
-      <div class="navbar shadow-sm px-14 py-2">
+      <div class="navbar shadow-sm px-14 py-2 flex flex-col md:flex-row gap-2">
         <div class="flex flex-1 items-center">
           <img class="w-8" src="./assets/github-logo.png" alt="Github Logo" />
           <a
-            class="btn btn-ghost text-[#1F2937] font-semibold text-xl hidden md:block"
+            class="btn btn-ghost text-[#1F2937] font-semibold text-xl"
             >GitHub Issues Tracker</a
           >
         </div>
@@ -59,10 +59,10 @@
               id="searchInput"
               type="text"
               placeholder="Search issues..."
-              class="input input-bordered w-24 md:w-auto pl-8 text-base"
+              class="input input-bordered md:w-auto pl-8 text-base"
             />
           </div>
-          <div class="hidden md:block">
+          <div class="">
             <button id="searchBtn" class="btn btn-primary">
               <i class="fa-solid fa-magnifying-glass"></i> Search
             </button>
