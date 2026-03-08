@@ -61,7 +61,7 @@ const displayAllData = (issues) => {
     const card = document.createElement("div");
     card.innerHTML = `
         <div onclick="openModal(${issue.id})" class="card bg-white card-md shadow-xl border border-gray-100 h-[94%] cursor-pointer">
-            <div class="card-body space-y-2 ${issue.status == 'open' ? "border-t-4 border-[#00A96E] rounded-xl" : "border-t-4 border-[#A855F7] rounded-xl"}">
+            <div class="card-body space-y-2 ${issue.status == "open" ? "border-t-4 border-[#00A96E] rounded-xl" : "border-t-4 border-[#A855F7] rounded-xl"}">
               <div class="flex justify-between items-center">
                 <img src="./assets/Open-Status.png" alt="Open Status" />
                 <div
@@ -130,8 +130,8 @@ const openModal = async (id) => {
 
   modalTitle.innerText = issueDetails.title;
   modalStatus.innerHTML = `${issueDetails.status == "open" ? `<button id="modalStatus" class="btn btn-success rounded-3xl text-white font-medium text-sm px-6"> ${issueDetails.status}</button>` : `<button id="modalStatus" class="btn btn-error rounded-3xl text-white font-medium text-sm px-6"> ${issueDetails.status}</button>`}`;
-  modalName.innerText = issueDetails.author;
-  modalDate.innerText = issueDetails.createdAt;
+  modalName.innerText = issueDetails.author.toUpperCase();
+  modalDate.innerHTML = `${new Date(issueDetails.createdAt).toLocaleDateString("en-US")}`;
   modalBadge.innerHTML = `${issueDetails.labels
     .map((label) => {
       return `<div
@@ -149,6 +149,5 @@ const openModal = async (id) => {
 
   issueModal.showModal();
 };
-
 
 // search section starts
