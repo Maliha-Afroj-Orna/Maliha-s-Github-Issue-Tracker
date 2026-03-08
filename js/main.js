@@ -95,9 +95,9 @@ const displayAllData = (issues) => {
                 ${issue.labels
                   .map((label) => {
                     return `<div
-                        class="badge badge-error text-[9px] ${label.toUpperCase() == "BUG" ? "text-[#EF4444] bg-[#FEECEC] border-[#EF4444]" : label.toUpperCase() == "HELP WANTED" ? "text-[#D97706] bg-[#FFF8DB] border-[#D97706]" : label.toUpperCase() == "ENHANCEMENT" ? "text-[#00A96E] bg-[#BBF7D0] border-[#00A96E]" : label.toUpperCase() == "GOOD FIRST ISSUE" ? "text-purple-700 bg-purple-400 border-purple-800" : "text-sky-700 bg-sky-400 border-sky-800"} font-medium rounded-3xl"
+                        class="badge badge-error text-[9px] ${label.toUpperCase() == "BUG" ? "text-[#EF4444] bg-[#FEECEC] border-[#EF4444]" : label.toUpperCase() == "HELP WANTED" ? "text-[#D97706] bg-[#FFF8DB] border-[#D97706]" : label.toUpperCase() == "ENHANCEMENT" ? "text-[#00A96E] bg-[#BBF7D0] border-[#00A96E]" : label.toUpperCase() == "GOOD FIRST ISSUE" ? "text-purple-700 bg-purple-300 border-purple-800" : "text-sky-700 bg-sky-300 border-sky-800"} font-medium rounded-3xl"
                         >
-                        ${label.toUpperCase() == "BUG" ? '<i class="fa-solid fa-bug text-[#EF4444]"></i>' : label.toUpperCase() == "HELP WANTED" ? '<i class="fa-solid fa-compact-disc"></i>' : label.toUpperCase() == "ENHANCEMENT" ? '<i class="fa-solid fa-star"></i>' : label.toUpperCase() == "good first issue" ? '<i class="fa-solid fa-circle-exclamation"></i>' : '<i class="fa-solid fa-file-circle-exclamation"></i>'} ${label.toUpperCase()}
+                        ${label.toUpperCase() == "BUG" ? '<i class="fa-solid fa-bug text-[#EF4444]"></i>' : label.toUpperCase() == "HELP WANTED" ? '<i class="fa-solid fa-compact-disc"></i>' : label.toUpperCase() == "ENHANCEMENT" ? '<i class="fa-solid fa-star"></i>' : label.toUpperCase() == "GOOD FIRST ISSUE" ? '<i class="fa-solid fa-triangle-exclamation"></i>' : '<i class="fa-solid fa-file-circle-exclamation"></i>'} ${label.toUpperCase()}
                         </div>
                         `;
                   })
@@ -150,9 +150,9 @@ const openModal = async (id) => {
   modalBadge.innerHTML = `${issueDetails.labels
     .map((label) => {
       return `<div
-                        class="badge badge-error text-[9px] ${label.toUpperCase() == "BUG" ? "text-[#EF4444] bg-[#FEECEC] border-[#EF4444]" : label.toUpperCase() == "HELP WANTED" ? "text-[#D97706] bg-[#FFF8DB] border-[#D97706]" : label.toUpperCase() == "ENHANCEMENT" ? "text-[#00A96E] bg-[#BBF7D0] border-[#00A96E]" : label.toUpperCase() == "GOOD FIRST ISSUE" ? "text-purple-700 bg-purple-400 border-purple-800" : "text-sky-700 bg-sky-400 border-sky-800"} font-medium rounded-3xl"
+                        class="badge badge-error text-[9px] ${label.toUpperCase() == "BUG" ? "text-[#EF4444] bg-[#FEECEC] border-[#EF4444]" : label.toUpperCase() == "HELP WANTED" ? "text-[#D97706] bg-[#FFF8DB] border-[#D97706]" : label.toUpperCase() == "ENHANCEMENT" ? "text-[#00A96E] bg-[#BBF7D0] border-[#00A96E]" : label.toUpperCase() == "GOOD FIRST ISSUE" ? "text-purple-700 bg-purple-300 border-purple-800" : "text-sky-700 bg-sky-300 border-sky-800"} font-medium rounded-3xl"
                         >
-                        ${label.toUpperCase() == "BUG" ? '<i class="fa-solid fa-bug text-[#EF4444]"></i>' : label.toUpperCase() == "HELP WANTED" ? '<i class="fa-solid fa-compact-disc"></i>' : label.toUpperCase() == "ENHANCEMENT" ? '<i class="fa-solid fa-star"></i>' : label.toUpperCase() == "good first issue" ? '<i class="fa-solid fa-circle-exclamation"></i>' : '<i class="fa-solid fa-file-circle-exclamation"></i>'} ${label.toUpperCase()}
+                        ${label.toUpperCase() == "BUG" ? '<i class="fa-solid fa-bug text-[#EF4444]"></i>' : label.toUpperCase() == "HELP WANTED" ? '<i class="fa-solid fa-compact-disc"></i>' : label.toUpperCase() == "ENHANCEMENT" ? '<i class="fa-solid fa-star"></i>' : label.toUpperCase() == "GOOD FIRST ISSUE" ? '<i class="fa-solid fa-triangle-exclamation"></i>' : '<i class="fa-solid fa-file-circle-exclamation"></i>'} ${label.toUpperCase()}
                         </div>
                         `;
     })
