@@ -39,13 +39,14 @@
     <!-- custom css -->
     <link rel="stylesheet" href="./css/index.css" />
   </head>
-  <body class="bg-[#64748b2e] h-vh pb-8">
+  <body class="bg-[#64748b0c] h-vh pb-8">
     <!-- navbar section starts -->
     <header>
       <div class="navbar shadow-sm px-14 py-2">
         <div class="flex flex-1 items-center">
           <img class="w-8" src="./assets/github-logo.png" alt="Github Logo" />
-          <a class="btn btn-ghost text-[#1F2937] font-semibold text-xl"
+          <a
+            class="btn btn-ghost text-[#1F2937] font-semibold text-xl hidden md:block"
             >GitHub Issues Tracker</a
           >
         </div>
@@ -61,7 +62,7 @@
               class="input input-bordered w-24 md:w-auto pl-8 text-base"
             />
           </div>
-          <div class="">
+          <div class="hidden md:block">
             <button id="searchBtn" class="btn btn-primary">
               <i class="fa-solid fa-magnifying-glass"></i> Search
             </button>
@@ -70,11 +71,11 @@
       </div>
     </header>
 
-    <main class="max-w-7xl mx-auto">
+    <main class="px-4 md:max-w-7xl mx-auto">
       <!-- tab section starts -->
       <div
         id="tabs"
-        class="mt-14 bg-white w-full p-6 rounded-lg mb-4 shadow-md"
+        class="mt-14 bg-white w-full p-6 rounded-lg mb-4 shadow-md text-center md:text-left"
       >
         <button
           onclick="toggleButton('all-tab')"
@@ -133,7 +134,10 @@
         </div>
 
         <!-- issues card section starts -->
-        <div id="cardContainer" class="grid grid-cols-4 gap-2 p-4">
+        <div
+          id="cardContainer"
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 p-4"
+        >
           <!-- all cards will be dynamically show here -->
         </div>
 
