@@ -7,6 +7,8 @@
 ![JavaScript](https://img.shields.io/badge/JavaScript-yellow?logo=javascript&logoColor=black)
 ![REST API](https://img.shields.io/badge/REST_API-02569B?logo=fastapi&logoColor=white)
 
+
+
 1. What is the difference between var, let, and const?
    
 ➡️ (i) var is hoisted.
